@@ -83,7 +83,7 @@ app = express()
 app.use(cookieParser())
 app.use(cors({
     credentials: true,
-    origin: ['http://localhost:3000', 'http://localhost:8080', 'http://localhost:4200','https://travel-cloud-60e48.web.app/']
+    origin: ['https://clinic-health-system.onrender.com','http://localhost:3000', 'http://localhost:8080', 'http://localhost:4200','https://travel-cloud-60e48.web.app/']
 }))
 
 app.use(express.json())
