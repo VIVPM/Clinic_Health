@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="signup.css"> -->
+    <title>Health</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Doctor Profile</div>
+        <form #userForm="ngForm" action="/" id="contact" (ngSubmit)="onSubmit()" novalidate>
+            <div class="user-details">
+                <div class="input-box">
+                   <span>First Name</span> 
+                   <input type="text" class="details" name="fname" id="fname" placeholder="Enter your First name" [class.is-invalid]="fname.invalid && fname.touched" required #fname="ngModel" [(ngModel)]="userModel.fname">
+                   <div *ngIf="fname.invalid && fname.touched">
+                    First Name is required
+                   </div>
+                </div>
+
+                <div class="input-box">
+                    <span>Middle Name</span> 
+                    <input type="text" class="details" name="mname" id="mname" placeholder="Enter your Middle name" [class.is-invalid]="mname.invalid && mname.touched" required #mname="ngModel" [(ngModel)]="userModel.mname">
+                    <div *ngIf="mname.invalid && mname.touched">
+                     Middle Name is required
+                    </div>
+                 </div>
+
+                 <div class="input-box">
+                    <span>Last Name</span> 
+                    <input type="text" class="details" name="lname" id="lname" placeholder="Enter your Last name" [class.is-invalid]="lname.invalid && lname.touched" required #lname="ngModel" [(ngModel)]="userModel.lname">
+                    <div *ngIf="lname.invalid && lname.touched">
+                     Last Name is required
+                    </div>
+                 </div>
+                <div class="input-box">
+                   <span >Username</span> 
+                   <input type="text" class="details"name="username" id="username"  placeholder="Enter your username" [class.is-invalid]="username.invalid && username.touched" required #username="ngModel" [(ngModel)]="userModel.username">
+                   <div *ngIf="username.invalid && username.touched">
+                    Name is required
+                   </div>
+                </div>
+                <div class="input-box">
+                   <span class="details">Email</span> 
+                   <input type="text" class="details" email=true name="email" id="email" placeholder="Enter your email" [class.is-invalid]="email.invalid && email.touched" required #email="ngModel" [(ngModel)]="userModel.email">
+                   <div *ngIf="email.invalid && email.touched">
+                    Email is required
+                   </div>
+                </div>
+                <div class="input-box">
+                   <span class="details">Phone Number</span> 
+                   <input type="text" class="details" name="phone" id="phone" placeholder="Enter your Number" [class.is-invalid]="phone.invalid && phone.touched" required #phone="ngModel" [(ngModel)]="userModel.phone">
+                   <div *ngIf="phone.invalid && phone.touched">
+                    Phone is required
+                   </div>
+                </div>
+                <div class="input-box">
+                   <span class="details">Password</span> 
+                   <input type="text" class="details"name="password" id="password"  placeholder="Enter password" [class.is-invalid]="password.invalid && password.touched" required #password="ngModel" [(ngModel)]="userModel.password">
+                   <div *ngIf="password.invalid && password.touched">
+                    Password is required
+                   </div>
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Upload</span> 
+                    <input type="file" class="details"name="file" id="file" (change)="Onfile($event)">
+                    <div *ngIf="password.invalid && password.touched">
+                     Password is required
+                    </div>
+                 </div>
+            </div>
+            <div class="gender-details">
+                <input type="radio" name="gender" id="dot-1"  #gender="ngModel" [class.is-invalid]="gender.invalid && gender.touched" id="dot-1"[(ngModel)]="userModel.gender">
+                <input type="radio" name="gender" id="dot-2">
+                <input type="radio" name="gender" id="dot-3">
+                <span class="gender-title">Gender:</span>
+                <div class="category">
+                    <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="gender">Male</span>
+                    </label>
+                    <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="gender">Female</span>
+                    </label>
+                    <label for="dot-3">
+                        <span class="dot three"></span>
+                        <span class="gender">Others</span>
+                    </label>
+                </div>
+            </div>
+            <div class="button">
+                <input type="Submit" [disabled]="userForm.form.invalid" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

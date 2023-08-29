@@ -1,1 +1,1 @@
-# Clinic_Health
+# Clinic-Management-System

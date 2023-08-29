@@ -1,0 +1,87 @@
+/* You can add global styles to this file, and also import other style files */
+    /* postData.append("name",name); 
+    postData.append("problem",problem); 
+    postData.append("solution",solution); 
+    postData.append("date",date); 
+    postData.append("gender",gender);
+    postData.append("status",status);
+
+    (name:string,probelm:string,solution:string,date:number,status:false) */
+
+         /* id:talData._id,  */
+          /* name:talData.name, 
+          problem:talData.problem, 
+          solution:talData.solution, 
+          date:talData.date, 
+          gender:talData.gender, 
+          status:talData.status */
+
+
+          /* this.myForm.value.name,this.myForm.value.problem,this.myForm.value.solution,this.myForm.value.date,this.myForm.value.gender,this.myForm.value.status */
+
+          /* name:post.name, 
+          problem:post.problem, 
+          solution:post.solution, 
+          date:post.date, 
+          gender:post.gender, 
+          status:post.status */
+ 
+        /* name:name, 
+        problem:problem, 
+        solution:solution, 
+        date:date, 
+        gender:gender,
+        status:status */
+
+        /* export interface talent{  
+            name:string; 
+            problem:string; 
+            solution:string; 
+            date:number; 
+            gender:string; 
+            status:false; 
+          } */
+
+    /* name:req.body.name, 
+    problem:req.body.problem, 
+    solution:req.body.solution, 
+    date:req.body.date, 
+    gender:req.body.gender, 
+    status:req.body.status */
+
+/* name:req.body.name, 
+    year:req.body.year, 
+    department:req.body.department, 
+    skill:req.body.skill, 
+    imagePath:url+"/images/"+req.file.filename, 
+    creator:req.userData.userId */
+
+        /* name:result.name, 
+          problem:result.problem, 
+          solution:result.solution, 
+          date:result.date, 
+          gender:result.gender, 
+          status:result.status */
+
+/* 
+          {
+            "name":"yash",
+            "email":"yash@gmail.com",
+            "username":"suri",
+            "password":789
+        } */
+
+
+        /* {
+          "email":"s@.com",
+          "password":"s"
+      } */
+
+      /* {
+        "name":"text",
+        "date":"2022-12-14",
+        "email":"t@.com",
+        "phone":"8904909189",
+        "Health":"good",
+        "status":"Physical"
+    } */
