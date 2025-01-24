@@ -41,7 +41,7 @@ export class AllSerService {
   private isAuthenticated = false;
   private authStatusListener = new Subject<boolean>();
   isLoggedIn1 = false;
-  isLoggedIn2 = false; 
+  isLoggedIn2 = false;
 
   loginUser1(): void {
     this.isLoggedIn1 = true;
@@ -119,7 +119,7 @@ export class AllSerService {
     values["problem"] = postData.get("problem");
     values["solution"] = postData.get("solution");
     values["date"] = postData.get("date");
-    this.http.post<{ message: string, talent: any }>('http://localhost:3000/api/talents', values)
+    this.http.post<{ message: string, talent: any }>('https://clinic-health.onrender.com/api/talents', values)
       .subscribe(responseData => {
         console.log(responseData.message);
         console.log(responseData.talent);
@@ -134,16 +134,16 @@ export class AllSerService {
   getTalent(id: string) {
     return this.http.get<{
       _id: string, name: string, problem: string, solution: string, date: number, gender: string, status: false
-    }>("http://localhost:3000/api/talents/" + id);
+    }>("https://clinic-health.onrender.com/api/talents/" + id);
   }
 
   deleteTalents(id: string) {
-    return this.http.delete("http://localhost:3000/api/talents/" + id);
+    return this.http.delete("https://clinic-health.onrender.com/api/talents/" + id);
   }
 
   getTalents() {
 
-    this.http.get<{ message: string, talents: any, maxTalent: number }>('http://localhost:3000/api/talents/getTalents')
+    this.http.get<{ message: string, talents: any, maxTalent: number }>('https://clinic-health.onrender.com/api/talents/getTalents')
       .pipe(map((postData) => {
         console.log(postData);
         return {
@@ -193,7 +193,7 @@ export class AllSerService {
       status: status
     }
 
-    this.http.put("http://localhost:3000/api/talents/" + id, TalData)
+    this.http.put("https://clinic-health.onrender.com/api/talents/" + id, TalData)
       .subscribe(response => {
         console.log(response)
       }, error => {
@@ -228,7 +228,7 @@ export class AllSerService {
     values["email"] = postData.get("email");
     values["phone"] = postData.get("phone");
     values["date"] = postData.get("date");
-    this.http.post<{ message: string, patient: any }>('http://localhost:3000/api/patients/appoinment', values)
+    this.http.post<{ message: string, patient: any }>('https://clinic-health.onrender.com/api/patients/appoinment', values)
       .subscribe(responceData => {
         console.log(responceData.message);
         console.log(responceData.patient);
@@ -237,7 +237,7 @@ export class AllSerService {
   }
   getPatients() {
 
-    this.http.get<{ message: string, talents: any, maxTalent: number }>('http://localhost:3000/api/patients/getPatients')
+    this.http.get<{ message: string, talents: any, maxTalent: number }>('https://clinic-health.onrender.com/api/patients/getPatients')
       .pipe(map((postData) => {
         console.log(postData);
         return {
@@ -264,7 +264,7 @@ export class AllSerService {
   getPatient(id: string) {
     return this.http.get<{
       _id: string, name: string, date: string, email: string, phone: string, health: string, status: false
-    }>("http://localhost:3000/api/patients/" + id);
+    }>("https://clinic-health.onrender.com/api/patients/" + id);
   }
   logout() {
     this.isLoggedIn1 = false;

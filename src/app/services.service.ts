@@ -9,6 +9,6 @@ export class ServicesService {
   constructor(private _http: HttpClient) { }
 
   // submitRegister(body:any){
-  //   return this._http.post('http://localhost:3000/api/SignUp', body);
+  //   return this._http.post('https://clinic-health.onrender.com/api/SignUp', body);
   // }
 }

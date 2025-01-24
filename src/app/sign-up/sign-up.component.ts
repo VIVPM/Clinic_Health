@@ -36,7 +36,7 @@ export class SignUpComponent implements OnInit {
   }
   register() {
     this.http
-      .post('http://localhost:3000/api/register', this.myForm.getRawValue())
+      .post('https://clinic-health.onrender.com/api/register', this.myForm.getRawValue())
       .subscribe(() => {
         // console.log(res);
         this.router.navigate(['./Login']);

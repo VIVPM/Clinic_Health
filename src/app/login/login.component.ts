@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
       this.allSerService.loginUser1();
       this.router.navigate(['/schedule']);
     } else {
-      this.http.post('http://localhost:3000/api/login', this.myForm.getRawValue(), {
+      this.http.post('https://clinic-health.onrender.com/api/login', this.myForm.getRawValue(), {
         // withCredentials: true
       }).subscribe({
         next: (response: any) => {
