@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="Home.css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li class="items"><a [routerLink]="['/Home']"
+                routerLinkActive="active">Home</a></li>
+            <li *ngIf="(!allSerService.isLoggedIn1 && allSerService.isLoggedIn2) || (!allSerService.isLoggedIn1 && !allSerService.isLoggedIn2)" class="items"><a [routerLink]="['/about']"
+                routerLinkActive="active">About</a></li>
+            <li class="items"><a [routerLink]="['/Doctor']"
+                routerLinkActive="active">Doctor</a></li>
+            <li *ngIf="allSerService.isLoggedIn1" class="items"><a [routerLink]="['/display']"
+                routerLinkActive="active">Display</a></li>
+            <li *ngIf="allSerService.isLoggedIn1 || allSerService.isLoggedIn2" class="items"><a [routerLink]="['/schedule']"
+                routerLinkActive="active">Schedule</a></li>
+            <li *ngIf="!allSerService.isLoggedIn1 && !allSerService.isLoggedIn2" class="call"><a [routerLink]="['/Login']"
+                routerLinkActive="active">Login</a></li>
+            <li *ngIf="allSerService.isLoggedIn1 || allSerService.isLoggedIn2" class="call"><a class="border-shadow" (click)="logout()">Logout</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- <div style="background-image: url('med.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <img class="img-fluid w-100" src="med.jpg" alt="">
+    </div> -->
+<router-outlet></router-outlet>
+</body>
+</html>

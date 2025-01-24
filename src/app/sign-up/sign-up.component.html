@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="signup.css"> -->
+    <title>Health</title>
+</head>
+<body style="background-image: url('med.jpg'); background-size: cover; background-position: center; height:700px; width:1480px">
+    <div class="container">
+        <div class="title">Enter The Details</div>
+        <form  [formGroup]="myForm" action="/" id="contact" novalidate>
+            <div class="user-details">
+                <div class="input-box">
+                   <span>Full Name</span>
+                   <input type="text" formControlName="name" class="details" name="name" id="name" placeholder="Enter your name" required>
+                   <!-- <div *ngIf="isValid('name')">
+                    Name is required
+                   </div> -->
+                </div>
+                <div class="input-box">
+                   <span >Username</span>
+                   <input type="text" formControlName="username" class="details"name="username" id="username"  placeholder="Enter your username" required>
+                   <!-- <div *ngIf="isValid('username')">
+                    Name is required
+                   </div> -->
+                </div>
+                <div class="input-box">
+                   <span class="details">Email</span>
+                   <input type="text" formControlName="email" class="details" email=true name="email" id="email" placeholder="Enter your email" required >
+                   <!-- <div *ngIf="isValid('email')">
+                    Email is required
+                   </div> -->
+                </div>
+                <!-- <div class="input-box">
+                   <span class="details">Phone Number</span>
+                   <input type="phone" formControlName="phone" class="details" name="phone" id="phone" placeholder="Enter your Number" required>
+                   <div *ngIf="isValid('phone')">
+                    Phone is required
+                   </div>
+                </div> -->
+                <div class="input-box">
+                   <span class="details">Password</span>
+                   <input type="text" formControlName="password" class="details"name="password" id="password"  placeholder="Enter password">
+                   <!-- <div *ngIf="isValid('password')">
+                    Password is required
+                   </div> -->
+                </div>
+                <!-- <div class="input-box">
+                   <span class="details">Confirm password</span>
+                   <input type="text" formControlName="cnfpass" class="details" name="cnfssword" id="cnfpass" placeholder="Confirm your password" >
+                   <div *ngIf="isValid('cnfpass')">
+                    Please confirm your password
+                   </div>
+                </div> -->
+            </div>
+            <!-- <div class="gender-details">
+                <input type="radio" name="gender" id="dot-1">
+                <input type="radio" name="gender" id="dot-2">
+                <input type="radio" name="gender" id="dot-3">
+                <span class="gender-title">Gender:</span>
+                <div class="category">
+                    <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="gender">Male</span>
+                    </label>
+                    <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="gender">Female</span>
+                    </label>
+                    <label for="dot-3">
+                        <span class="dot three"></span>
+                        <span class="gender">Others</span>
+                    </label>
+                </div>
+            </div> -->
+            <div class="button">
+                <!-- <input type="Submit" value="Submit"> -->
+                <button (click)="register()">Sign In</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

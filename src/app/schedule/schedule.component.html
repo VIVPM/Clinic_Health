@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule</title>
+</head>
+<body style="background-image: url('med.jpg'); background-size: cover; background-position: center; height:700px; width:1480px">
+    <!-- Header -->
+    <!-- <header id="header">
+        <nav>
+            <div class="container">
+                <div class="text-center">
+                    <a href="/" class="nav-brand text-dark">Schedule</a>
+                </div>
+            </div>
+        </nav>
+    </header> -->
+<!-- /Header -->
+<main id="site-main">
+    <div class="container">
+        <!-- <div class="box-nav d-flex justify-between">
+            <a routerLink="/Appointment" class="border-shadow">
+                <span class="text-gradient">Make An Appoinment <i class="fas fa-user"></i></span>
+            </a>
+            <a href="/Video" class="border-shadow">
+                <span class="text-gradient">Video Call <i class="fas fa-user"></i></span>
+            </a>
+            <button (click)="logout()" class="border-shadow">
+              <span class="text-gradient">Log Out <i class="fas fa-user"></i></span>
+            </button>
+        </div> -->
+        <div class="box-nav d-flex">
+          <div class="left-links d-flex">
+            <a routerLink="/Appointment" class="border-shadow">
+              <span class="text-gradient">Make An Appointment <i class="fas fa-user"></i></span>
+            </a>
+            <!-- <a href="/Video" class="border-shadow">
+              <span class="text-gradient">Video Call <i class="fas fa-user"></i></span>
+            </a> -->
+          </div>
+          <!-- <div class="right-link">
+            <button (click)="logout()" class="border-shadow">
+              <span class="text-gradient">Log Out <i class="fas fa-user"></i></span>
+            </button>
+          </div> -->
+        </div>
+
+        <!--form handling-->
+        <form action="/"method="POST">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <!-- <th>ID</th> -->
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Timings</th>
+                        <th>Phone</th>
+                        <th>Health</th>
+                        <th>Status</th>
+                        <!-- <th>Action</th> -->
+
+                    </tr>
+                </thead>
+                <tbody>
+                   <tr *ngFor="let patient of patients">
+                    <!-- <td><span>{{talent.id}}</span></td> -->
+                    <td><span>{{patient.name}}</span></td>
+                    <td><span>{{patient.date}}</span></td>
+                    <td><span>{{patient.email}}</span></td>
+                    <td><span>{{patient.phone}}</span></td>
+                    <td><span>{{patient.health}}</span></td>
+                    <td><span>{{patient.status}}</span></td>
+                    <!-- <button (click)="Delete(talent.id)"class="btn border-shadow update">Edit
+                        <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                    </button> -->
+                    <!-- <button (click)="Delete(talent.id)" *ngIf="userIsAuthenticated && userId == talent.creator">Edit</button> -->
+                        <!-- <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span> -->
+
+                    <!-- <button class="btn border-shadow delete" [routerLink]="['/add-patient',talent.id]" >Update
+                        <span class="text-gradient"><i class="fas fa-times"></i></span>
+                    </button> -->
+                   </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</main>
+
+</body>
+</html>

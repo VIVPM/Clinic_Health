@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+     <!-- This link font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body style="background-image: url('med.jpg'); background-size: cover; background-position: center; height:700px; width:1480px">
+
+    <!-- Header -->
+        <!-- <header id="header">
+            <nav>
+                <div class="container">
+                    <div class="text-center">
+                        <a href="/" class="nav-brand text-dark">User Management System</a>
+                    </div>
+                </div>
+            </nav>
+        </header> -->
+    <!-- /Header -->
+
+    <!--Main-->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a href="/add-patient" class="border-shadow">
+                    <span class="text-gradient">New User <i class="fas fa-user"></i></span>
+                </a>
+                <a href="/Video" class="border-shadow" >
+                  <span class="text-gradient">Video Call <i class="fas fa-user"></i></span>
+                </a>
+                <!-- <button (click)="logout()" class="border-shadow">
+                    <span class="text-gradient">Log Out <i class="fas fa-user"></i></span>
+                </button> -->
+            </div>
+
+            <!--form handling-->
+            <form action="/"method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <!-- <th>ID</th> -->
+                            <th>Name</th>
+                            <th>Problem</th>
+                            <th>Solution</th>
+                            <th>Date</th>
+                            <th>Gender</th>
+                            <th>Status</th>
+                            <th>Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                       <tr *ngFor="let talent of talents">
+                        <!-- <td><span>{{talent.id}}</span></td> -->
+                        <td><span>{{talent.name}}</span></td>
+                        <td><span>{{talent.problem}}</span></td>
+                        <td><span>{{talent.solution}}</span></td>
+                        <td><span>{{talent.date}}</span></td>
+                        <td><span>{{talent.gender}}</span></td>
+                        <td><span>{{talent.status}}</span></td>
+
+                        <button class="btn border-shadow update" [routerLink]="['/add-patient',talent.id]" >Update
+                            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                        </button>
+                        <button (click)="Delete(talent.id)"class="btn border-shadow delete">Delete
+                            <span class="text-gradient"><i class="fas fa-times"></i></span>
+                        </button>
+                        <!-- <button (click)="Delete(talent.id)"class="btn border-shadow delete" disabled>VideoCall
+                          <span class="text-gradient"><i class="fas fa-times"></i></span>
+                        </button> -->
+                        <!-- <button (click)="Delete(talent.id)" *ngIf="userIsAuthenticated && userId == talent.creator">Edit</button> -->
+                            <!-- <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span> -->
+                       </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

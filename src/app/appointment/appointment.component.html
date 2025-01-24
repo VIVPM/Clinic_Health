@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="appoinment.css"> -->
+    <title>Health</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Registration</div>
+        <form [formGroup]="myForm" action="#" method="POST">
+            <div class="user-details">
+                <div class="input-box">
+                   <span class="details">Full Name</span>
+                   <input type="text" formControlName="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Date</span>
+                    <input type="date" formControlName="date" name="date" placeholder="Enter Date" required>
+                 </div>
+                 <div class="input-box">
+                    <span class="details">Time:</span>
+                    <select formControlName="email" name="email" id="email" class="details" (change)="update1($event)">
+                        <option value="">Select Timing</option>
+                        <option *ngFor="let player of players" [value]="player">
+                            {{player}}
+                        </option>
+                    </select>
+                    <p *ngIf="selectedTime">Selected Time: {{ selectedTime }}</p>
+                </div>
+                <!-- <p>You selected {{selected}}</p> -->
+
+
+                <div class="input-box">
+                   <span class="details">Phone Number</span>
+                   <input type="text" formControlName="phone" name="phone" placeholder="Enter your Number" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Condition:</span>
+                    <select formControlName="health" name="health" id="departement" class="details">
+                        <option value="Body Ache">Body Ache</option>
+                        <option value="Cough">Cough</option>
+                        <option value="Fever">Fever</option>
+                        <option value="Headache">Headache</option>
+                        <option value="Swelling">Swelling</option>
+                        <option value="Dry Eyes">Dry Eyes</option>
+                        <option value="Loss of Taste">Loss of Taste</option>
+                        <option value="Others">Others</option>
+                      </select>
+                </div>
+                <div class="form-group">
+
+                    <label for="gender" class="text-light">Status:</label>
+                    <div class="radio inline">
+                        <input type="radio" formControlName="status" id="radio-4" name="status" value="Video Call" >
+                        <label for="radio-4"  class="radio-label">Video call</label>
+                    </div>
+                    <div class="radio inline">
+                        <input type="radio" id="radio-5" formControlName="status" name="status" value="Physical" >
+                        <label for="radio-5" class="radio-label">Physical</label>
+                    </div>
+                </div>
+                <!-- <div class="input-box">
+                   <span class="details"></span>
+                   <textarea name="message" id="message" class="form-control" rows="6" placeholder="Enter message.."></textarea>
+                </div> -->
+            </div>
+            <div class="button">
+                <input type="Submit" (click)="onSavePost()" value="Register">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+.navbar{
+    display: flex;
+    position: relative;
+    top: -8px;
+}
+
+.navbar ul{
+    display: flex;
+    width:'100%'
+ }
+ .navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+ }
+ .navbar ul li a{
+    color: black;
+    border-radius: 20px;
+    padding: 3px 20px;
+    text-decoration: none;
+ }
+  .call{
+   margin-left: 925px;
+}
+.navbar ul li a:hover{
+   color: white;
+   background-color: black;
+
+}
+.navbar::before{
+   content: "";
+   background-color: black;
+   position: absolute;
+   height: 100%;
+   width: 1500px;
+   z-index: -1;
+   opacity: 0.45;
+   margin-left: -15px;
+}
+
+
+/* Home */
+
+/* .home{
+   display: flex;
+   flex-direction: column;
+   padding: 3px 200px;
+   background-color: lightblue;
+   height: 500px;
+   justify-content: center;
+   align-items: center;
+}
+.home::before {
+  content: "";
+  background: url('med.jpg') no-repeat center center/cover;
+  background-color: lightblue;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.69;
+}
+.home p{
+   color: black;
+   text-align: center;
+   font-size: 1.5rem;
+   font-family: "Trirong", serif;
+} */
