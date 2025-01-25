@@ -35,6 +35,6 @@
     "zone.js": "~0.11.4"
   },
   "proxy": [
-    "http://localhost:4200","https://clinic-health-system.onrender.com"
+    "http://localhost:4200","https://clinic-health.onrender.com"
   ]
 }

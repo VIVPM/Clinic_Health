@@ -42,7 +42,7 @@ body{
 }
 form .user-details .input-box{
     margin-bottom: 15px;
-    width: calc(100% /2 - 20px);   
+    width: calc(100% /2 - 20px);
 }
 form .user-details .input-box .details{
     display: block;
@@ -117,7 +117,7 @@ textarea{
     }
     .input-box{
         margin-bottom: 15px;
-        width:100%;   
+        width:100%;
     }
     .category{
         width:100%;
