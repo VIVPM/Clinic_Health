@@ -9,7 +9,7 @@
     <!-- <link rel="stylesheet" href="./add-patient.component.css"> -->
 </head>
 <body>
-    
+
     <!-- Header -->
         <!-- <header id="header">
             <nav>
@@ -27,14 +27,14 @@
         <div class="container">
             <div class="box-nav d-flex justify-between">
                <div class="filter">
-                   <a href="/display"><i class="fas fa-angle-double-left"></i> All Patients</a>
+                   <a routerLink="/display"><i class="fas fa-angle-double-left"></i> All Patients</a>
                </div>
             </div>
             <div class="form-title text-center">
                 <h2 class="text-dark">New patient</h2>
                 <span class="text-light">Use the below form to add a new patient</span>
             </div>
-    
+
             <!-- add user form -->
             <form [formGroup]="myForm" action="/api/users" method="POST" id="add_user">
                 <div class="new_user">
@@ -71,7 +71,7 @@
                             <label for="radio-3" class="radio-label">Female</label>
                         </div>
                     </div>
-            
+
                     <div class="form-group">
                         <label for="gender" class="text-light">Status</label>
                         <div class="radio inline">
@@ -83,14 +83,14 @@
                             <label for="radio-5" class="radio-label">Physical</label>
                         </div>
                     </div>
-            
+
                     <div class="form-group">
                         <button id="addb2" type="submit" (click)="onSavePost()" class="btn text-dark update">Save</button>
                     </div>
-            
+
                 </div>
             </form>
-           
+
         </div>
     </main>
 </body>
