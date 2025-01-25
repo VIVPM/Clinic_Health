@@ -5,7 +5,7 @@ const router = express.Router();
 
 const newUser = require('../model/model2')
 
-router.post("/addTalent", async (req,res,next)=>{
+router.post("/", async (req,res,next)=>{
 
   //  console.log(req.body.name);
 

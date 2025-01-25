@@ -119,7 +119,7 @@ export class AllSerService {
     values["problem"] = postData.get("problem");
     values["solution"] = postData.get("solution");
     values["date"] = postData.get("date");
-    this.http.post<{ message: string, talent: any }>('https://clinic-health.onrender.com/api/talents/addTalent', values)
+    this.http.post<{ message: string, talent: any }>('https://clinic-health.onrender.com/api/talents/', values)
       .subscribe(responseData => {
         console.log(responseData.message);
         console.log(responseData.talent);
