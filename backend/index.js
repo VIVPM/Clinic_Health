@@ -34,6 +34,11 @@ app.use("/api/talents",TalentRoutes)
 
 app.use("/api/patients",PatientRoutes)
 
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+
+
 app.listen(port, () => {
   console.log(`Server started on port ${port}!`);
 });
